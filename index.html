@@ -90,7 +90,7 @@
 
                     <div class="col-md-4 mb-3">
                         <b>In which class do you want to study :</b>
-                        <select class="form-control" require>
+                        <select class="form-control" require name="class">
                             <option value="1">Class One</option>
                             <option value="2">Class Two</option>
                             <option value="3">Class Three</option>
@@ -119,12 +119,12 @@
                             <div class="col-md-7 ">
                                 <div class="col-md-12  mb-3 ">
                                     <b>First Name :</b>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="firstName">
                                 </div>
 
                                 <div class="col-md-12  mb-3 ">
                                     <b>Last Name :</b>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="lastName">
                                 </div>
                             </div>
 
@@ -171,7 +171,7 @@
                         <div class="row mx-0">
                             <div class="col-md-7  mb-3 ">
                                 <b>Contact Number :</b>
-                                <input type="text" class="form-control" require>
+                                <input name="candidateContact" type="text" class="form-control" require>
                             </div>
 
                             <div class="col-md-5  mb-2 ">
@@ -188,12 +188,12 @@
 
                             <div class="col-md-7 mb-3">
                                 <b>Email :</b>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="candidateEmail">
                             </div>
 
                             <div class="col-md-5">
                                 <b> Date Of Birth :</b>
-                                <input type="date" class="form-control">
+                                <input type="date" class="form-control" name="dob">
                             </div>
 
                         </div>
@@ -203,7 +203,7 @@
                         <div class="row mx-0">
                             <div class="col-md-12  mb-2 ">
                                 <b>Address :</b>
-                                <textarea type="text" class="form-control"></textarea>
+                                <textarea type="text" class="form-control" name="address"></textarea>
                             </div>
                         </div>
                     </div>
@@ -221,18 +221,18 @@
                 <div class="row mx-0">
                     <div class="col-md-12 mb-3">
                         <b>Name:</b>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="fatherName">
                     </div>
                     <div class="col-md-12 ">
                         <div class="row">
                             <div class="col-md-6  mb-3 ">
                                 <b>Profession:</b>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="fatherProfession">
                             </div>
                             <div class="col-md-6  mb-3 ">
                                 <b>Qualification:</b>
 
-                                <input placeholder="Select Qualification" list="father-qualification" class="form-control">
+                                <input placeholder="Select Qualification" name="fatherQualification" list="father-qualification" class="form-control">
                                 <datalist id="father-qualification">
                                     <option>High or Inter School</option>
                                     <option>Diploma</option>
@@ -247,11 +247,11 @@
                         <div class="row">
                             <div class="col-md-6  mb-3 ">
                                 <b>Contact Number:</b>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="fatherContact">
                             </div>
                             <div class="col-md-6">
                                 <b>Email :</b>
-                                <input type="text" placeholder="Optional" class="form-control">
+                                <input type="text" placeholder="Optional" class="form-control" name="fatherEmail">
                             </div>
                         </div>
                     </div>
@@ -268,17 +268,17 @@
                 <div class="row mx-0">
                     <div class="col-md-12 mb-3">
                         <b>Name:</b>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="motherName">
                     </div>
                     <div class="col-md-12 ">
                         <div class="row">
                             <div class="col-md-6  mb-3 ">
                                 <b>Profession:</b>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="motherProfession">
                             </div>
                             <div class="col-md-6  mb-3 ">
                                 <b>Qualification:</b>
-                                <select class="form-control">
+                                <select class="form-control" name="motherQualification">
                                     <option>Select Qualification</option>
                                     <option>High or Inter School</option>
                                     <option>Diploma</option>
@@ -292,11 +292,11 @@
                         <div class="row">
                             <div class="col-md-6  mb-3 ">
                                 <b>Contact Number:</b>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="motherContact">
                             </div>
                             <div class="col-md-6">
                                 <b>Email :</b>
-                                <input type="text" placeholder="Optional" class="form-control">
+                                <input type="text" placeholder="Optional" class="form-control" name="motherEmail">
                             </div>
                         </div>
                     </div>
@@ -322,15 +322,15 @@
                             </div>
                             <div class="col-md-6  mb-3 ">
                                 <b>Ews and Disabled :</b> <br>
-                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="ews"> EWS </label> &nbsp; &nbsp;
-                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="disabled"> Disabled S.G. Child </label>
+                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="isEws"> EWS </label> &nbsp; &nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="isDisabled"> Disabled S.G. Child </label>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="col-md-12 mb-3">
-                        <label><b>Are there any siblings who studying in Ahad Inernational Academy <input type="checkbox" onchange="checkSiblings(this.checked)"></b> </label>
+                        <label><b>Are there any siblings who studying in Ahad Inernational Academy <input name="anySiblings" type="checkbox" onchange="checkSiblings(this.checked)"></b> </label>
                         <script>
                             function checkSiblings(e) {
                                 e ? document.getElementById("siblingsDetail").style.display = 'flex' : document.getElementById("siblingsDetail").style.display = 'none';
@@ -339,11 +339,11 @@
                         <div id="siblingsDetail" class="row ">
                             <div class="col-md-8 mb-3">
                                 <b>Sibling Name :</b>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="siblingName">
                             </div>
                             <div class="col-md-4">
                                 <b>Class :</b>
-                                <select class="form-control">
+                                <select class="form-control" name="siblingClass">
                                     <option value="1">Class 1</option>
                                     <option value="2">Class 2</option>
                                     <option value="3">Class 3</option>
@@ -353,9 +353,9 @@
                                     <option value="7">Class 7</option>
                                     <option value="8">Class 8</option>
                                     <option value="9">Class 9</option>
-                                    <option value="10" disabled>Class 10</option>
+                                    <option value="10">Class 10</option>
                                     <option value="11">Class 11</option>
-                                    <option value="12" disabled>Class 12</option>
+                                    <option value="12">Class 12</option>
                                 </select>
                             </div>
                         </div>
@@ -366,11 +366,11 @@
                         <div class="row">
                             <div class="col-md-6  mb-3 ">
                                 <b>Aadhar Card Number:</b>
-                                <input type="tel" class="form-control" minlength="12" maxlength="12">
+                                <input type="tel" class="form-control" minlength="12" name="aadharNumber" maxlength="12">
                             </div>
                             <div class="col-md-6">
                                 <b>Blood Group :</b>
-                                <select class="form-control">
+                                <select class="form-control" name="bloodGroup">
                                     <option disabled> Optional </option>
                                     <option value="A+">A RhD positive (A+)</option>
                                     <option value="A-">A RhD negative (A-)</option>
