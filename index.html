@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        crossorigin="anonymous">
     <style>
         fieldset.scheduler-border {
             border: 1px groove #ddd !important;
@@ -39,7 +40,8 @@
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">LoGo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -66,11 +68,11 @@
                 </li> -->
 
                 <li class="nav-item">
-                    <a class="nav-link  text-light" href="#" >Contact</a>
+                    <a class="nav-link  text-light" href="#">Contact</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link  text-light" href="#" >Services</a>
+                    <a class="nav-link  text-light" href="#">Services</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -90,19 +92,19 @@
 
                     <div class="col-md-4 mb-3">
                         <b>In which class do you want to study :</b>
-                        <select class="form-control" require name="class">
-                            <option value="1">Class One</option>
-                            <option value="2">Class Two</option>
-                            <option value="3">Class Three</option>
-                            <option value="4">Class Four</option>
-                            <option value="5">Class Five</option>
-                            <option value="6">Class Six</option>
-                            <option value="7">Class Seven</option>
-                            <option value="8">Class Eight</option>
-                            <option value="9">Class Nine</option>
-                            <option value="10" disabled>Class Ten</option>
-                            <option value="11">Class Eleven</option>
-                            <option value="12" disabled>Class Twelve</option>
+                        <select class="form-control" name="class">
+                            <option value="1000">Class One</option>
+                            <option value="2000">Class Two</option>
+                            <option value="3000">Class Three</option>
+                            <option value="40000">Class Four</option>
+                            <option value="5000">Class Five</option>
+                            <option value="6000">Class Six</option>
+                            <option value="7000">Class Seven</option>
+                            <option value="8000">Class Eight</option>
+                            <option value="9000">Class Nine</option>
+                            <option value="10000" disabled>Class Ten</option>
+                            <option value="1100">Class Eleven</option>
+                            <option value="1200" disabled>Class Twelve</option>
                         </select>
                     </div>
             </div>
@@ -132,13 +134,15 @@
                                 <div class="row d-flex justify-content-around">
                                     <div>
                                         <b>Upload Image </b>
-                                        <div onclick="document.getElementById('filePicture').click()" id="candidatePicture" class="imgContainer"></div>
-                                        <input type="file" name="candidatePicture" id="filePicture" onchange="changePicture(this)" style="display: none;">
+                                        <div onclick="document.getElementById('filePicture').click()"
+                                            id="candidatePicture" class="imgContainer"></div>
+                                        <input type="file" name="candidatePicture" id="filePicture"
+                                            onchange="changePicture(this)" style="display: none;">
                                         <script>
                                             function changePicture(input) {
                                                 if (input.files && input.files[0]) {
                                                     var reader = new FileReader();
-                                                    reader.onload = function(e) {
+                                                    reader.onload = function (e) {
                                                         document.getElementById("candidatePicture").style.backgroundImage = "url(" + e.target.result + ")";
                                                     }
                                                     reader.readAsDataURL(input.files[0]);
@@ -148,13 +152,15 @@
                                     </div>
                                     <div>
                                         <b>Upload Signature </b>
-                                        <div onclick="document.getElementById('fileSignature').click()" id="candidateSignature" class="imgContainer"></div>
-                                        <input type="file" name="candidateSignature" id="fileSignature" onchange="changeSignature(this)" style="display: none;">
+                                        <div onclick="document.getElementById('fileSignature').click()"
+                                            id="candidateSignature" class="imgContainer"></div>
+                                        <input type="file" name="candidateSignature" id="fileSignature"
+                                            onchange="changeSignature(this)" style="display: none;">
                                         <script>
                                             function changeSignature(input) {
                                                 if (input.files && input.files[0]) {
                                                     var reader = new FileReader();
-                                                    reader.onload = function(e) {
+                                                    reader.onload = function (e) {
                                                         document.getElementById("candidateSignature").style.backgroundImage = "url(" + e.target.result + ")";
                                                     }
                                                     reader.readAsDataURL(input.files[0]);
@@ -171,14 +177,17 @@
                         <div class="row mx-0">
                             <div class="col-md-7  mb-3 ">
                                 <b>Contact Number :</b>
-                                <input name="candidateContact" type="text" class="form-control" require>
+                                <input name="candidateContact" type="text" class="form-control" >
                             </div>
 
                             <div class="col-md-5  mb-2 ">
                                 <b>Gander :</b> <br>
-                                <label style="font-weight: 500;" class="pt-2"><input type="radio" name="gander"> Male</label> &nbsp;
-                                <label style="font-weight: 500;" class="pt-2"><input type="radio" name="gander"> Female</label> &nbsp;
-                                <label style="font-weight: 500;" class="pt-2"><input type="radio" name="gander"> Other</label> &nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="radio" value="male" name="gander">
+                                    Male</label> &nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="radio" value="female" name="gander">
+                                    Female</label> &nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="radio" value="other" name="gander">
+                                    Other</label> &nbsp;
                             </div>
                         </div>
                     </div>
@@ -232,7 +241,8 @@
                             <div class="col-md-6  mb-3 ">
                                 <b>Qualification:</b>
 
-                                <input placeholder="Select Qualification" name="fatherQualification" list="father-qualification" class="form-control">
+                                <input placeholder="Select Qualification" name="fatherQualification"
+                                    list="father-qualification" class="form-control">
                                 <datalist id="father-qualification">
                                     <option>High or Inter School</option>
                                     <option>Diploma</option>
@@ -315,22 +325,30 @@
                         <div class="row">
                             <div class="col-md-6  mb-3 ">
                                 <b>Do you belong to :</b> <br>
-                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="cast"> GEN </label> &nbsp;&nbsp;
-                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="cast"> OBC </label> &nbsp; &nbsp;
-                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="cast"> SC </label> &nbsp;&nbsp;
-                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="cast"> ST </label> &nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="radio" name="cast" value="GEN"> GEN
+                                </label> &nbsp;&nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="radio" name="cast" value="OBC"> OBC
+                                </label> &nbsp; &nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="radio" name="cast" value="SC"> SC
+                                </label> &nbsp;&nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="radio" name="cast" value="ST"> ST
+                                </label> &nbsp;
                             </div>
                             <div class="col-md-6  mb-3 ">
                                 <b>Ews and Disabled :</b> <br>
-                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="isEws"> EWS </label> &nbsp; &nbsp;
-                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="isDisabled"> Disabled S.G. Child </label>
+                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="isEws"> EWS
+                                </label> &nbsp; &nbsp;
+                                <label style="font-weight: 500;" class="pt-2"><input type="checkbox" name="isDisabled">
+                                    Disabled S.G. Child </label>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="col-md-12 mb-3">
-                        <label><b>Are there any siblings who studying in Ahad Inernational Academy <input name="anySiblings" type="checkbox" onchange="checkSiblings(this.checked)"></b> </label>
+                        <label><b>Are there any siblings who studying in Ahad Inernational Academy <input
+                                    name="anySiblings" type="checkbox" onchange="checkSiblings(this.checked)"></b>
+                        </label>
                         <script>
                             function checkSiblings(e) {
                                 e ? document.getElementById("siblingsDetail").style.display = 'flex' : document.getElementById("siblingsDetail").style.display = 'none';
@@ -366,7 +384,8 @@
                         <div class="row">
                             <div class="col-md-6  mb-3 ">
                                 <b>Aadhar Card Number:</b>
-                                <input type="tel" class="form-control" minlength="12" name="aadharNumber" maxlength="12">
+                                <input type="tel" class="form-control" minlength="12" name="aadharNumber"
+                                    maxlength="12">
                             </div>
                             <div class="col-md-6">
                                 <b>Blood Group :</b>
@@ -387,10 +406,10 @@
                 </div>
             </fieldset>
 
-            <br><br><br><br><button type="submit" class="btn btn-dark d-block m-auto btn-primary">
-                 <b>Continue and Next </b>
-            </button>
 
+            <br><br><br><br><button type="submit" name="submit" class="btn btn-dark d-block m-auto btn-primary">
+                <b>Continue and Next </b>
+            </button>
             </form>
         </div>
 
@@ -398,10 +417,12 @@
     </div>
     </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

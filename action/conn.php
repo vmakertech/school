@@ -1,3 +1,3 @@
 <?php
-$con=mysqli_connect('localhost','root','','vmaker');
+$conn=mysqli_connect('localhost','root','','vmaker');
 ?>
