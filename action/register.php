@@ -15,12 +15,14 @@ if (isset($_POST['submit'])) {
     $lastName = $_POST['lastName'];
 
     $candidatePicture = $_FILES['candidatePicture']['name'];
+    $candidatePicture = $firstName . $candidatePicture;
     $tmpCandidatePicture = $_FILES['candidatePicture']['tmp_name'];
     $folder = '../assest/candidatePicture/' . $candidatePicture;
     move_uploaded_file($tmpCandidatePicture, $folder);
 
 
     $candidateSignature = $_FILES['candidateSignature']['name'];
+    $candidateSignature =  $firstName . $candidateSignature;
     $tmpCandidateSignature = $_FILES['candidateSignature']['tmp_name'];
     $folder = '../assest/candidateSignature/' . $candidateSignature;
     move_uploaded_file($tmpCandidateSignature, $folder);
@@ -116,7 +118,8 @@ if (isset($_POST['submit'])) {
 
 if (isset($_POST['payment_id']) && isset($_SESSION['OID'])) {
     $payment_id = $_POST['payment_id'];
-    mysqli_query($conn, "update collage set paymentStatus='success',paymentId='$payment_id' where id='" . $_SESSION['OID'] . "'");
+    $currentDate = date('Y-m-d h:i:s');
+    mysqli_query($conn, "update collage set paymentStatus='success',paymentId='$payment_id',paymentOn = '$currentDate' where id='" . $_SESSION['OID'] . "'");
 }
 
 ?>
