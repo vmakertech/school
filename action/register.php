@@ -111,9 +111,9 @@ if (isset($_POST['submit'])) {
                         border: 2px solid gray;
                     }
 
-                    #siblingsDetail {
+                    /* #siblingsDetail {
                         display: none;
-                    }
+                    } */
                 </style>
             </head>
 
@@ -206,12 +206,31 @@ if (isset($_POST['submit'])) {
 
                                         <div class="col-md-5  mb-2 ">
                                             <b>Gander :</b> <br>
-                                            <label style="font-weight: 500;" class="pt-2"><input type="radio" value="male" name="gander">
+                                            <?php
+                                            if ($res['gander'] == "male") {
+                                                echo '<label style="font-weight: 500;" class="pt-2"><input checked type="radio" disabled>
                                                 Male</label> &nbsp;
-                                            <label style="font-weight: 500;" class="pt-2"><input type="radio" value="female" name="gander">
+                                                <label style="font-weight: 500;" class="pt-2"><input type="radio" disabled>
                                                 Female</label> &nbsp;
-                                            <label style="font-weight: 500;" class="pt-2"><input type="radio" value="other" name="gander">
-                                                Other</label> &nbsp;
+                                                <label style="font-weight: 500;" class="pt-2"><input disabled type="radio">
+                                                Other</label> &nbsp;';
+                                            } elseif ($res['gander'] == "female") {
+                                                echo '<label style="font-weight: 500;" class="pt-2"><input type="radio" disabled>
+                                                Male</label> &nbsp;
+                                                <label style="font-weight: 500;" class="pt-2"><input type="radio" checked disabled>
+                                                Female</label> &nbsp;
+                                                <label style="font-weight: 500;" class="pt-2"><input disabled type="radio">
+                                                Other</label> &nbsp;';
+                                            } else {
+                                                echo '<label style="font-weight: 500;" class="pt-2"><input type="radio" disabled>
+                                                Male</label> &nbsp;
+                                                <label style="font-weight: 500;" class="pt-2"><input type="radio" disabled>
+                                                Female</label> &nbsp;
+                                                <label style="font-weight: 500;" class="pt-2"><input disabled checked type="radio">
+                                                Other</label> &nbsp;';
+                                            }
+
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
@@ -471,7 +490,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 </div>
                 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-                <script src="https://checkout.razorpay.com/v1/checkout.js"></script> 
+                <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
             </body>
